@@ -2,7 +2,7 @@
 
 A calm hex-stacking puzzle for the Commodore 64, written in BASIC V2 with a small machine-code music player.
 
-https://m0nde.itch.io
+https://m0nde.itch.io/hex64
 
 ## How to play
 
