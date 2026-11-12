@@ -24,6 +24,9 @@
 
 ## v3 - 2026-11-10
 
+**Move to own repo**
+- The game was moved from the C64-BASIC repo to its own repo
+
 **Game rewrite**
 - Each hex holds a stack of up to 8 chips in 3 colors. Stacks are dealt to you; you place them on empty hexes.
 - Matching top colors slide onto the stack you placed, and chains continue through the neighbours. 6 of one color on top clear and score.
