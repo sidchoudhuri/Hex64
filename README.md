@@ -1,6 +1,6 @@
 # Hex64
 
-A calm hex-stacking puzzle for the Commodore 64, written in BASIC V2 with a small machine-code music player.
+A calm hex-stacking puzzle for the Commodore 64, written in BASIC V2 with a small machine language music player.
 
 https://m0nde.itch.io/hex64
 
