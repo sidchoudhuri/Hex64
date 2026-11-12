@@ -11,7 +11,7 @@ def tok(src,dst):
     return os.path.getsize(dst)
 for s,d in (('hex64-loader.bas','loader.prg'),('hex64-game.bas','game.prg')):
     print(d,tok(s,d),'bytes')
-subprocess.run(['cp','/home/claude/hex64/music/hex64music.prg','music.prg'],check=True)
+subprocess.run(['cp','prg/hex64music.prg','music.prg'],check=True)
 D='hex64.d64'
 if os.path.exists(D): os.remove(D)
 subprocess.run(['c1541','-format','hex64,04','d64',D,'-write','loader.prg','hex64','-write','game.prg','hex64game',
