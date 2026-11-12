@@ -14,8 +14,8 @@ for s,d in (('hex64-loader.bas','loader.prg'),('hex64-game.bas','game.prg')):
 subprocess.run(['cp','/home/claude/hex64/music/hex64music.prg','music.prg'],check=True)
 D='hex64.d64'
 if os.path.exists(D): os.remove(D)
-subprocess.run(['c1541','-format','hex64,03','d64',D,'-write','loader.prg','hex64','-write','game.prg','hex64game',
-                '-write','music.prg','hex64music','-write','hex64data.prg','hex64data'],check=True,capture_output=True)
+subprocess.run(['c1541','-format','hex64,04','d64',D,'-write','loader.prg','hex64','-write','game.prg','hex64game',
+                '-write','music.prg','hex64music','-write','hex64chars.prg','hex64chars','-write','hex64bg.prg','hex64bg'],check=True,capture_output=True)
 img=bytearray(open(D,'rb').read())
 SPT=[0]+[21]*17+[19]*7+[18]*6+[17]*5
 def off(t,s): return (sum(SPT[1:t])+s)*256
@@ -37,7 +37,7 @@ art=[b'    \xce\xc0\xc0\xc0\xc0\xc0\xc0\xcd    ',
      b'    \xcd\xc0\xc0\xc0\xc0\xc0\xc0\xce    ']
 def delent(nm):
     e=bytearray(30); e[0]=0x80; e[3:19]=nm.ljust(16,b'\xa0'); return bytes(e)
-order=[byname['HEX64']]+[delent(a) for a in art]+[byname['HEX64GAME'],byname['HEX64MUSIC'],byname['HEX64DATA']]
+order=[byname['HEX64']]+[delent(a) for a in art]+[byname['HEX64GAME'],byname['HEX64MUSIC'],byname['HEX64CHARS'],byname['HEX64BG']]
 # write entries into 18/1, 18/4, 18/7 ...
 secs=[1,4,7,10]
 need=(len(order)+7)//8
