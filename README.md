@@ -57,4 +57,4 @@ BASIC listings are tokenized with petcat (part of VICE): `petcat -w2 -o game.prg
 
 Design, code, graphics and music by m0nde.
 
-(C)2026 m0nde. Licensed under CC BY-NC-SA 4.0.
+(C)2026 m0nde. Licensed under CC BY-NC-SA 4.0: see [LICENSE](LICENSE).
