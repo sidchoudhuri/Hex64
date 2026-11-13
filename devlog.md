@@ -17,6 +17,9 @@
 - Loader menu: new line `D - DEMO`; S and Q moved down one row.
 - Title, instructions, credits and disk ID are V5 / 05.
 - `HEXED.SID` (PAL, both subtunes: "Hexed" and "Hexed Glide") is on the disk.
+- Volume is shown as 5 notches, like PETSCII Pit: a block for each notch that is on, a checkerboard for each one that is off (game, demo and SID setup). The checkerboard is a new character, 124, in the character set.
+- Instructions screen: keywords highlighted in white over the green text.
+- Demo: after all 5 boards it shows the same "ALL 5 BOARDS COMPLETE!" screen as the game, with the score, for 3 seconds, then starts again.
 
 **Tested (VICE)**
 - Seed 64 clears all 5 boards (fast mode, about 75 seconds).
