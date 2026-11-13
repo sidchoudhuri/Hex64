@@ -32,6 +32,9 @@
 - Control codes are typed inline in the strings instead of CHR$ where the text was rewritten.
 - The instructions are rewritten for v6, with a chip stack and the three fruit drawn next to their names.
 
+**Instructions in the game**
+- I in the game shows the instructions instantly; any key puts the board back exactly as it was. `HEX64HELP` (loaded once by the loader to $2C00) holds the finished instructions screen and a small copy routine at $3400; the game's screen is saved at $2400 while they show.
+
 **Memory**
 - Loader arrays `PH%` and `PA%` are integer now.
 - The game and demo now load at $4001 with the top of memory at $9000 (about 20 KB), instead of $0801 to $3800. The loader sets this before loading them.

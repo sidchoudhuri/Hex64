@@ -18,6 +18,7 @@ Fruit sits on some hexes and blocks them. Every clear next to a fruit takes a bi
 | SPACE | Place your stack |
 | V | Volume (one SID) |
 | M / E | Music / sound effects volume (two SIDs) |
+| I | Instructions (any key goes back to the game) |
 | Q | Back to the menu |
 
 Menu: P play, I instructions, C credits, D demo, S SID setup, Q quit.
@@ -51,7 +52,7 @@ The loader detects one or two SIDs (the second at $D420) and PAL or NTSC. With t
 | `src/hex64-music.asm` | Music player and tunes at $9000 (ACME) |
 | `src/hex64-bg.asm` | Menu background routine at $C800 (ACME) |
 | `font/hex64-font.bin` | The Hex64 font: 64 characters (capitals, digits, symbols) followed by 26 lowercase letters, 8 bytes each; `hex64-font.png` shows it |
-| `prg/` | Built music, character set and background files |
+| `prg/` | Built music, character set, background and instructions (`hex64help.prg`) files |
 | `sid/` | "Hexed" .sid files |
 | `devlog.md`, `roadmap.md` | What changed, and what's next |
 
