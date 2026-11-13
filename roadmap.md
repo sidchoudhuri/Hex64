@@ -19,7 +19,7 @@ Status: **DONE**, **TO DO**, **TO DO LATER**, **MAYBE**.
 | DONE | New directory art: hexagon with a stack of chips, drawn by m0nde |
 | TO DO | Test on real hardware, including two SIDs and NTSC (only tested in VICE so far, one SID, PAL) |
 | TO DO | Record a GIF of the demo for the itch.io page |
-| TO DO LATER | Barriers as fruit (banana, strawberry, apple) in multicolour characters, sitting on hexes. Matching stacks next to a fruit take a bite out of it; a fruit needs 1 to 3 bites to clear, with a new bitten graphic at each stage. Each bite plays a short original chomp animation on that hex in place of the fruit (style still to choose). |
+| TO DO LATER | Barriers as fruit (banana, strawberry, apple) in multicolour characters, sitting on hexes. Matching stacks next to a fruit take a bite out of it; a fruit needs 1 to 3 bites to clear, with a new bitten graphic at each stage. Each bite plays a short chomp animation of cartoon teeth snapping shut on that hex, in place of the fruit. |
 | TO DO LATER | When the cursor is on a hex, show what is in it somewhere, or in big graphics, since piles are sometimes hard to read |
 | TO DO LATER | High-contrast version for accessibility |
 | TO DO LATER | Music changes from "Hexed" to "Hexed Glide" on game events (the demo must switch the same way) |
