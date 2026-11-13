@@ -19,6 +19,7 @@
 - `HEXED.SID` (PAL, both subtunes: "Hexed" and "Hexed Glide") is on the disk.
 - Volume is shown as 5 notches, like PETSCII Pit: a block for each notch that is on, a checkerboard for each one that is off (game, demo and SID setup). The checkerboard is a new character, 124, in the character set.
 - Instructions screen: keywords highlighted in white over the green text.
+- Thicker hex outlines: 2-pixel diagonals; sides are 1 pixel where two hexes touch (2 together) and 2 pixels on outer edges (new characters 125 and 126), so every edge looks even.
 - Demo: after all 5 boards it shows the same "ALL 5 BOARDS COMPLETE!" screen as the game, with the score, for 3 seconds, then starts again.
 
 **Tested (VICE)**

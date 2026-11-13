@@ -14,11 +14,12 @@ Status: **DONE**, **TO DO**, **TO DO LATER**, **MAYBE**.
 | DONE | v4: a finishing stack pulls every matching chip from its neighbours (8-chip limit lifted only while clearing) and scores every chip |
 | DONE | v4: board ARCH renamed GEM |
 | DONE | v4: memory: character set at $3800, loader background at $C000, all game arrays integer (`%`) |
+| DONE | v5: thicker, even hex outlines |
 | DONE | v5: self-playing demo (menu key D): same game every time, plays all 5 boards and loops, +/- speed, Q to the menu |
 | DONE | New directory art: hexagon with a stack of chips, drawn by m0nde |
 | TO DO | Test on real hardware, including two SIDs and NTSC (only tested in VICE so far, one SID, PAL) |
 | TO DO | Record a GIF of the demo for the itch.io page |
-| TO DO LATER | Thicker edges on the hex tiles |
+| TO DO LATER | Barriers on the board: blocked hexes that clear when stacks are matched next to them. Some barriers need more than one match, up to 3. |
 | TO DO LATER | When the cursor is on a hex, show what is in it somewhere, or in big graphics, since piles are sometimes hard to read |
 | TO DO LATER | High-contrast version for accessibility |
 | TO DO LATER | Music changes from "Hexed" to "Hexed Glide" on game events (the demo must switch the same way) |
