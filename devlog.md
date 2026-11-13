@@ -15,6 +15,9 @@
 - The difficulty (Normal, Hard, Hard 2...), the clear target and the deal size show between STACK and NEXT.
 - The stack under the cursor is shown big on the right: thick bars with gaps between chips, so the colors are easy to tell apart. It updates when the cursor rests.
 
+**Retry**
+- When a board fills up, SPACE plays the same board again with the score you had when it started. R starts a new game from board 1, Q goes to the menu.
+
 **Text and font**
 - New Hex64 font, drawn for the game: capitals, digits and symbols, plus 26 lowercase letters. All the text is in mixed case.
 - Lowercase letters live in characters 129-154 and are printed with reverse on, so the board graphics keep their characters. Reverse space is now blank; the volume notches use character 157.
@@ -22,6 +25,7 @@
 - The instructions are rewritten for v6, with a chip stack and the three fruit drawn next to their names.
 
 **Memory**
+- Loader arrays `PH%` and `PA%` are integer now.
 - The game and demo now load at $4001 with the top of memory at $9000 (about 20 KB), instead of $0801 to $3800. The loader sets this before loading them.
 
 **Tested (VICE)**

@@ -20,17 +20,15 @@ Status: **DONE**, **TO DO**, **TO DO LATER**, **MAYBE**.
 | DONE | v6: mini fruit bar showing each fruit's bitten stage; bonuses for extra chips, eaten fruit and finished boards |
 | DONE | v6: endless harder runs (bigger stacks, clear 5 then 6, 7, 8); difficulty shown under the board; big stack view for the hex under the cursor |
 | DONE | v6: Hex64 font (capitals and lowercase), mixed-case text, fruit and chip pictures in the instructions |
+| DONE | v6: retry a failed board: when a board fills up, SPACE plays that board again with the score you started it with (R starts over, Q menu) |
+| DONE | v6: loader arrays `PH%` and `PA%` are integer |
 | DONE | New directory art: hexagon with a stack of chips, drawn by m0nde |
 | TO DO | Test on real hardware, including two SIDs and NTSC (only tested in VICE so far, one SID, PAL) |
 | TO DO | Record a GIF of the demo for the itch.io page |
-| TO DO LATER | When the cursor is on a hex, show what is in it somewhere, or in big graphics, since piles are sometimes hard to read |
-| TO DO LATER | High-contrast version for accessibility |
 | TO DO LATER | Music changes from "Hexed" to "Hexed Glide" on game events (the demo must switch the same way) |
 | TO DO LATER | Better sound effects: go through every game event, decide where a sound is needed, and make every effect very calming (ASMR) |
-| TO DO LATER | Retry a failed board: when a board fills up, you can play that board again instead of starting over |
 | TO DO LATER | Undo token: eating a fruit earns a token that undoes your last move |
 | MAYBE | Tune the goal per board (`NC=4` clears' worth of points, game line 110) |
-| MAYBE | Integer arrays in the loader too (`PH`, `PA`; small saving) |
 
 ## C64 puzzle disk (Hex64, C64Doku, C64Sweeper)
 
