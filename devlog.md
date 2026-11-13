@@ -1,5 +1,22 @@
 # Hex64 devlog
 
+## v5 - 2026-11-12
+
+**Demo mode**
+- New program `HEX64DEMO`, started with D from the menu: the game plays itself.
+- The demo player picks the empty hex with the most matching chips around it, walks the cursor there one step at a time, and places the stack.
+- Same game every time (fixed seed 64), so it can be recorded. With that seed it clears all 5 boards, then shows the result for 3 seconds and starts again. If the board ever fills, it does the same.
+- `+` and `-` change the speed (1 to 5, starting at 3). The volume keys work as in the game. Q returns to the menu at any time, including during the pauses.
+- The demo plays the same music as the game ("Hexed"); when the game starts switching tunes, the demo will follow.
+
+**Other**
+- Loader menu: new line `D - DEMO`; S and Q moved down one row.
+- Title, instructions, credits and disk ID are V5 / 05.
+
+**Tested (VICE)**
+- Seed 64 clears all 5 boards (fast mode, about 75 seconds).
+- Menu, D, the demo running on board 2, `-` changing the speed, and Q back to the menu.
+
 ## v4 - 2026-11-12
 
 **Gameplay**
