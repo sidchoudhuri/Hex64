@@ -43,7 +43,7 @@ The loader detects one or two SIDs (the second at $D420) and PAL or NTSC. With t
 
 | Path | What it is |
 |---|---|
-| `hex64.d64` | The disk: loader, game, demo, music, character set, menu background |
+| `hex64.d64` | The disk: loader, game, demo, music, character set, menu background, and `HEXED.SID` (both subtunes) |
 | `src/hex64-loader.bas` | Loader and menu (BASIC V2) |
 | `src/hex64-game.bas` | The game (BASIC V2) |
 | `src/hex64-demo.bas` | The self-playing demo (BASIC V2) |

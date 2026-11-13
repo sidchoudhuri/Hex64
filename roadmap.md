@@ -18,7 +18,6 @@ Status: **DONE**, **TO DO**, **TO DO LATER**, **MAYBE**.
 | DONE | New directory art: hexagon with a stack of chips, drawn by m0nde |
 | TO DO | Test on real hardware, including two SIDs and NTSC (only tested in VICE so far, one SID, PAL) |
 | TO DO | Record a GIF of the demo for the itch.io page |
-| TO DO | Make the build scripts in `tools/` portable (they still use paths from the build machine) |
 | TO DO LATER | Thicker edges on the hex tiles |
 | TO DO LATER | When the cursor is on a hex, show what is in it somewhere, or in big graphics, since piles are sometimes hard to read |
 | TO DO LATER | High-contrast version for accessibility |

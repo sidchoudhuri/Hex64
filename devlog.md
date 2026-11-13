@@ -9,13 +9,19 @@
 - `+` and `-` change the speed (1 to 5, starting at 3). The volume keys work as in the game. Q returns to the menu at any time, including during the pauses.
 - The demo plays the same music as the game ("Hexed"); when the game starts switching tunes, the demo will follow.
 
+**Game and demo screen**
+- The score line, the board name/message line and the key line are centered across all 40 columns.
+- "BOARD COMPLETE" is now "COMPLETE", and it shows on the board you just finished while the chime plays; the next board starts with the message cleared.
+
 **Other**
 - Loader menu: new line `D - DEMO`; S and Q moved down one row.
 - Title, instructions, credits and disk ID are V5 / 05.
+- `HEXED.SID` (PAL, both subtunes: "Hexed" and "Hexed Glide") is on the disk.
 
 **Tested (VICE)**
 - Seed 64 clears all 5 boards (fast mode, about 75 seconds).
 - Menu, D, the demo running on board 2, `-` changing the speed, and Q back to the menu.
+- "COMPLETE" shows on the finished Flower board and is gone when Ring starts.
 
 ## v4 - 2026-11-12
 
