@@ -47,6 +47,7 @@ The loader detects one or two SIDs (the second at $D420) and PAL or NTSC. With t
 | `src/hex64-loader.bas` | Loader and menu (BASIC V2) |
 | `src/hex64-game.bas` | The game (BASIC V2) |
 | `src/hex64-demo.bas` | The self-playing demo (BASIC V2) |
+| `src/hex64-test.bas` | Test tool, not in the menu: `LOAD"HEX64TEST",8` and `RUN`. Start the game or demo at any board and run, play every sound effect, play the music subtunes, and view the fruit, chomp, icons and the whole character set |
 | `src/hex64-music.asm` | Music player and tunes at $9000 (ACME) |
 | `src/hex64-bg.asm` | Menu background routine at $C800 (ACME) |
 | `font/hex64-font.bin` | The Hex64 font: 64 characters (capitals, digits, symbols) followed by 26 lowercase letters, 8 bytes each; `hex64-font.png` shows it |

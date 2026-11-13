@@ -20,7 +20,7 @@ Status: **DONE**, **TO DO**, **TO DO LATER**, **MAYBE**.
 | DONE | v6: mini fruit bar showing each fruit's bitten stage; bonuses for extra chips, eaten fruit and finished boards |
 | DONE | v6: endless harder runs (bigger stacks, clear 5 then 6, 7, 8); difficulty shown under the board; big stack view for the hex under the cursor |
 | DONE | v6: Hex64 font (capitals and lowercase), mixed-case text, fruit and chip pictures in the instructions |
-| DONE | v6: retry a failed board: when a board fills up, SPACE plays that board again with the score you started it with (R starts over, Q menu) |
+| DONE | v6: retry a failed board: when a board fills up, R plays that board again with the score you started it with (N new game, Q menu) |
 | DONE | v6: loader arrays `PH%` and `PA%` are integer |
 | DONE | New directory art: hexagon with a stack of chips, drawn by m0nde |
 | TO DO | Test on real hardware, including two SIDs and NTSC (only tested in VICE so far, one SID, PAL) |

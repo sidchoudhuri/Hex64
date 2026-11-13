@@ -16,7 +16,14 @@
 - The stack under the cursor is shown big on the right: thick bars with gaps between chips, so the colors are easy to tell apart. It updates when the cursor rests.
 
 **Retry**
-- When a board fills up, SPACE plays the same board again with the score you had when it started. R starts a new game from board 1, Q goes to the menu.
+- When a board fills up, R plays the same board again with the score you had when it started. N starts a new game from board 1, Q goes to the menu.
+
+**Sound**
+- Softer, fuller sound effects: each one fades in, holds at a gentle level and fades out slowly, so they can be heard at normal volume. New sound when a fruit is eaten.
+- Starting volumes: music 2/5 and sound effects 5/5 with two SIDs, 3/5 with one SID.
+
+**Test tool**
+- `HEX64TEST` on the disk, not in the menu (`LOAD"HEX64TEST",8` and `RUN`): start the game or the demo at any board (1-5) and run (Normal, Hard, Hard 2...), play every sound effect, play subtune 1 or 2, and view the fruit, chomp, icons and the whole character set. Q in the game or demo goes back to the test tool.
 
 **Text and font**
 - New Hex64 font, drawn for the game: capitals, digits and symbols, plus 26 lowercase letters. All the text is in mixed case.
