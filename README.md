@@ -8,7 +8,7 @@ https://m0nde.itch.io/hex64
 
 Drop stacks of colored chips onto a board of hexes. When a stack lands, neighboring hexes whose top color matches slide those chips onto it. Get 5 chips of one color on top and they clear and score; extra chips in a clear score double. A hex holds up to 8 chips; a stack that is about to clear can pull every matching chip from around it and scores them all.
 
-Fruit sits on some hexes and blocks them. Every clear next to a fruit takes a bite out of it: an apple takes 3 bites, a strawberry 3 and a banana 4. To finish a board, eat all the fruit and reach the goal. There are 5 boards: Flower, Ring, Gem, Wings and Full. The stacks you are dealt hold from 1 chip up to the board number. Finish all 5 and you can play them again, harder: bigger stacks, more chips to clear (6, then 7, then 8), and tougher strawberries and bananas, run after run. A full board ends the game.
+Fruit sits on some hexes and blocks them. Every clear next to a fruit takes a bite out of it: an apple takes 3 bites, a strawberry 3 and a banana 4. To finish a board, eat all the fruit and reach the goal. There are 5 boards: Flower, Ring, Gem, Wings and Honeycomb. The stacks you are dealt hold from 1 chip up to the board number. Finish all 5 and you can play them again, harder: bigger stacks, more chips to clear (6, then 7, then 8), and tougher strawberries and bananas, run after run. A full board ends the game.
 
 ## Keys
 

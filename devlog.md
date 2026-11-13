@@ -3,11 +3,12 @@
 ## v6 - 2026-11-13
 
 **Fruit**
-- Every board has fruit on fixed hexes: Flower 1, Ring 2, Gem 3, Wings 4, Full 5 (apple, strawberry, banana). A fruit hex can't be played on.
+- Every board has fruit on fixed hexes: Flower 1, Ring 2, Gem 3, Wings 4, Honeycomb 5 (apple, strawberry, banana). A fruit hex can't be played on.
 - Every clear next to a fruit takes a bite: a cartoon chomp (teeth snapping shut twice) plays on the hex, then the fruit's next bitten stage appears. Apple 3 bites, strawberry 3, banana 4; in the harder runs strawberry 4 and banana 5. An eaten fruit leaves an empty hex.
 - A board is finished when all its fruit is eaten and the goal is reached.
 - A mini fruit bar under the board name shows each fruit left, at its bitten stage.
 - Ring now has every hex except the centre, with its fruit on 9 and 11.
+- Board 5, Full, is renamed Honeycomb.
 
 **Scoring and difficulty**
 - Clear target is 5 (was 6). Extra chips in a clear score double. Eating a fruit scores 2 x its bites x board x run; finishing a board scores 20 x board x run.
@@ -16,7 +17,7 @@
 - The stack under the cursor is shown big on the right: thick bars with gaps between chips, so the colors are easy to tell apart. It updates when the cursor rests.
 
 **Retry**
-- When a board fills up, R plays the same board again with the score you had when it started. N starts a new game from board 1, Q goes to the menu.
+- When a board fills up ("FULL! R RETRY N NEW Q MENU"), R plays the same board again with the score you had when it started. N starts a new game from board 1, Q goes to the menu.
 
 **Sound**
 - Softer, fuller sound effects: each one fades in, holds at a gentle level and fades out slowly, so they can be heard at normal volume. New sound when a fruit is eaten.
