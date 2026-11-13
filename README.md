@@ -48,7 +48,6 @@ The loader detects one or two SIDs (the second at $D420) and PAL or NTSC. With t
 | `src/hex64-bg.asm` | Menu background routine at $C800 (ACME) |
 | `prg/` | Built music, character set and background files |
 | `sid/` | "Hexed" .sid files |
-| `tools/` | Build scripts (still use paths from the build machine) |
 | `devlog.md`, `roadmap.md` | What changed, and what's next |
 
 BASIC listings are tokenized with petcat (part of VICE): `petcat -w2 -o game.prg -- hex64-game.bas`.
