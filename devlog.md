@@ -1,5 +1,34 @@
 # Hex64 devlog
 
+## v6 - 2026-11-13
+
+**Fruit**
+- Every board has fruit on fixed hexes: Flower 1, Ring 2, Gem 3, Wings 4, Full 5 (apple, strawberry, banana). A fruit hex can't be played on.
+- Every clear next to a fruit takes a bite: a cartoon chomp (teeth snapping shut twice) plays on the hex, then the fruit's next bitten stage appears. Apple 3 bites, strawberry 3, banana 4; in the harder runs strawberry 4 and banana 5. An eaten fruit leaves an empty hex.
+- A board is finished when all its fruit is eaten and the goal is reached.
+- A mini fruit bar under the board name shows each fruit left, at its bitten stage.
+- Ring now has every hex except the centre, with its fruit on 9 and 11.
+
+**Scoring and difficulty**
+- Clear target is 5 (was 6). Extra chips in a clear score double. Eating a fruit scores 2 x its bites x board x run; finishing a board scores 20 x board x run.
+- Dealt stacks hold from 1 chip up to the board number. After each run you can play again, harder, as many times as you like: the smallest stack grows (2, 2, 2, 3, 3, 4, 4, then 5) and the clear target goes 6, 7, then 8.
+- The difficulty (Normal, Hard, Hard 2...), the clear target and the deal size show between STACK and NEXT.
+- The stack under the cursor is shown big on the right: thick bars with gaps between chips, so the colors are easy to tell apart. It updates when the cursor rests.
+
+**Text and font**
+- New Hex64 font, drawn for the game: capitals, digits and symbols, plus 26 lowercase letters. All the text is in mixed case.
+- Lowercase letters live in characters 129-154 and are printed with reverse on, so the board graphics keep their characters. Reverse space is now blank; the volume notches use character 157.
+- Control codes are typed inline in the strings instead of CHR$ where the text was rewritten.
+- The instructions are rewritten for v6, with a chip stack and the three fruit drawn next to their names.
+
+**Memory**
+- The game and demo now load at $4001 with the top of memory at $9000 (about 20 KB), instead of $0801 to $3800. The loader sets this before loading them.
+
+**Tested (VICE)**
+- Menu, instructions, credits, SID setup and the game screen.
+- The demo gets past Flower and plays Ring, eating fruit.
+
+
 ## v5 - 2026-11-12
 
 **Demo mode**

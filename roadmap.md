@@ -16,14 +16,19 @@ Status: **DONE**, **TO DO**, **TO DO LATER**, **MAYBE**.
 | DONE | v4: memory: character set at $3800, loader background at $C000, all game arrays integer (`%`) |
 | DONE | v5: thicker, even hex outlines |
 | DONE | v5: self-playing demo (menu key D): same game every time, plays all 5 boards and loops, +/- speed, Q to the menu |
+| DONE | v6: fruit on every board (apple, strawberry, banana) at fixed hexes; clears next to a fruit bite it, with a chomp animation; eat all the fruit and reach the goal to finish a board |
+| DONE | v6: mini fruit bar showing each fruit's bitten stage; bonuses for extra chips, eaten fruit and finished boards |
+| DONE | v6: endless harder runs (bigger stacks, clear 5 then 6, 7, 8); difficulty shown under the board; big stack view for the hex under the cursor |
+| DONE | v6: Hex64 font (capitals and lowercase), mixed-case text, fruit and chip pictures in the instructions |
 | DONE | New directory art: hexagon with a stack of chips, drawn by m0nde |
 | TO DO | Test on real hardware, including two SIDs and NTSC (only tested in VICE so far, one SID, PAL) |
 | TO DO | Record a GIF of the demo for the itch.io page |
-| TO DO LATER | Barriers as fruit (banana, strawberry, apple) in multicolour characters, sitting on hexes. Matching stacks next to a fruit take a bite out of it; a fruit needs 1 to 3 bites to clear, with a new bitten graphic at each stage. Each bite plays a short chomp animation of cartoon teeth snapping shut on that hex, in place of the fruit. |
 | TO DO LATER | When the cursor is on a hex, show what is in it somewhere, or in big graphics, since piles are sometimes hard to read |
 | TO DO LATER | High-contrast version for accessibility |
 | TO DO LATER | Music changes from "Hexed" to "Hexed Glide" on game events (the demo must switch the same way) |
 | TO DO LATER | Better sound effects: go through every game event, decide where a sound is needed, and make every effect very calming (ASMR) |
+| TO DO LATER | Retry a failed board: when a board fills up, you can play that board again instead of starting over |
+| TO DO LATER | Undo token: eating a fruit earns a token that undoes your last move |
 | MAYBE | Tune the goal per board (`NC=4` clears' worth of points, game line 110) |
 | MAYBE | Integer arrays in the loader too (`PH`, `PA`; small saving) |
 
