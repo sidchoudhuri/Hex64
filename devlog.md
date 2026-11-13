@@ -1,5 +1,76 @@
 # Hex64 devlog
 
+## v6 - 2026-11-13
+
+**Fruit**
+- Every board has fruit on fixed hexes: Flower 1, Ring 2, Gem 3, Wings 4, Honeycomb 5 (apple, strawberry, banana). A fruit hex can't be played on.
+- Every clear next to a fruit takes a bite: a cartoon chomp (teeth snapping shut twice) plays on the hex, then the fruit's next bitten stage appears. Apple 3 bites, strawberry 3, banana 4; in the harder runs strawberry 4 and banana 5. An eaten fruit leaves an empty hex.
+- A board is finished when all its fruit is eaten and the goal is reached.
+- A mini fruit bar under the board name shows each fruit left, at its bitten stage.
+- Ring now has every hex except the centre, with its fruit on 9 and 11.
+- Board 5, Full, is renamed Honeycomb.
+
+**Scoring and difficulty**
+- Clear target is 5 (was 6). Extra chips in a clear score double. Eating a fruit scores 2 x its bites x board x run; finishing a board scores 20 x board x run.
+- Dealt stacks hold from 1 chip up to the board number. After each run you can play again, harder, as many times as you like: the smallest stack grows (2, 2, 2, 3, 3, 4, 4, then 5) and the clear target goes 6, 7, then 8.
+- The difficulty (Normal, Hard, Hard 2...), the clear target and the deal size show between STACK and NEXT.
+- The stack under the cursor is shown big on the right: thick bars with gaps between chips, so the colors are easy to tell apart. It updates when the cursor rests.
+
+**Retry**
+- When a board fills up ("FULL! R RETRY N NEW Q MENU"), R plays the same board again with the score you had when it started. N starts a new game from board 1, Q goes to the menu.
+
+**Sound**
+- Softer, fuller sound effects: each one fades in, holds at a gentle level and fades out slowly, so they can be heard at normal volume. New sound when a fruit is eaten.
+- Starting volumes: music 2/5 and sound effects 5/5 with two SIDs, 3/5 with one SID.
+
+**Test tool**
+- `HEX64TEST` on the disk, not in the menu (`LOAD"HEX64TEST",8` and `RUN`): start the game or the demo at any board (1-5) and run (Normal, Hard, Hard 2...), play every sound effect, play subtune 1 or 2, and view the fruit, chomp, icons and the whole character set. Q in the game or demo goes back to the test tool.
+
+**Text and font**
+- New Hex64 font, drawn for the game: capitals, digits and symbols, plus 26 lowercase letters. All the text is in mixed case.
+- Lowercase letters live in characters 129-154 and are printed with reverse on, so the board graphics keep their characters. Reverse space is now blank; the volume notches use character 157.
+- Control codes are typed inline in the strings instead of CHR$ where the text was rewritten.
+- The instructions are rewritten for v6, with a chip stack and the three fruit drawn next to their names.
+
+**Instructions in the game**
+- I in the game shows the instructions instantly; any key puts the board back exactly as it was. `HEX64HELP` (loaded once by the loader to $2C00) holds the finished instructions screen and a small copy routine at $3400; the game's screen is saved at $2400 while they show.
+
+**Memory**
+- Loader arrays `PH%` and `PA%` are integer now.
+- The game and demo now load at $4001 with the top of memory at $9000 (about 20 KB), instead of $0801 to $3800. The loader sets this before loading them.
+
+**Tested (VICE)**
+- Menu, instructions, credits, SID setup and the game screen.
+- The demo gets past Flower and plays Ring, eating fruit.
+
+
+## v5 - 2026-11-12
+
+**Demo mode**
+- New program `HEX64DEMO`, started with D from the menu: the game plays itself.
+- The demo player picks the empty hex with the most matching chips around it, walks the cursor there one step at a time, and places the stack.
+- Same game every time (fixed seed 64), so it can be recorded. With that seed it clears all 5 boards, then shows the result for 3 seconds and starts again. If the board ever fills, it does the same.
+- `+` and `-` change the speed (1 to 5, starting at 3). The volume keys work as in the game. Q returns to the menu at any time, including during the pauses.
+- The demo plays the same music as the game ("Hexed"); when the game starts switching tunes, the demo will follow.
+
+**Game and demo screen**
+- The score line, the board name/message line and the key line are centered across all 40 columns.
+- "BOARD COMPLETE" is now "COMPLETE", and it shows on the board you just finished while the chime plays; the next board starts with the message cleared.
+
+**Other**
+- Loader menu: new line `D - DEMO`; S and Q moved down one row.
+- Title, instructions, credits and disk ID are V5 / 05.
+- `HEXED.SID` (PAL, both subtunes: "Hexed" and "Hexed Glide") is on the disk.
+- Volume is shown as 5 notches, like PETSCII Pit: a block for each notch that is on, a checkerboard for each one that is off (game, demo and SID setup). The checkerboard is a new character, 124, in the character set.
+- Instructions screen: keywords highlighted in white over the green text.
+- Thicker hex outlines: 2-pixel diagonals; sides are 1 pixel where two hexes touch (2 together) and 2 pixels on outer edges (new characters 125 and 126), so every edge looks even.
+- Demo: after all 5 boards it shows the same "ALL 5 BOARDS COMPLETE!" screen as the game, with the score, for 3 seconds, then starts again.
+
+**Tested (VICE)**
+- Seed 64 clears all 5 boards (fast mode, about 75 seconds).
+- Menu, D, the demo running on board 2, `-` changing the speed, and Q back to the menu.
+- "COMPLETE" shows on the finished Flower board and is gone when Ring starts.
+
 ## v4 - 2026-11-12
 
 **Gameplay**
