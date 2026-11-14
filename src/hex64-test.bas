@@ -13,7 +13,7 @@
 96 IF S2=0 THEN EV=MV
 98 SB=54272+32*S2:GOSUB 960:LV=1:RD=1
 100 REM *** MAIN MENU ***
-110 PRINT "{clr}{wht}H{rvon}EX{rvof}64 {rvon}V{rvof}6 {rvon}TEST TOOL{rvof}":PRINT
+110 PRINT "{clr}{wht}H{rvon}EX{rvof}64 {rvon}V{rvof}7 {rvon}TEST TOOL{rvof}":PRINT
 120 PRINT "{yel}G {grn}- {wht}{rvon}START THE GAME{rvof}"
 130 PRINT "{yel}D {grn}- {wht}{rvon}START THE DEMO{rvof}":PRINT
 140 PRINT "{yel}L {grn}- {wht}{rvon}BOARD{rvof}:";LV:PRINT "{yel}R {grn}- {wht}{rvon}RUN{rvof}:";RD;
@@ -73,13 +73,14 @@
 2000 REM *** MUSIC AND SUBTUNES ***
 2010 PRINT "{clr}{wht}M{rvon}USIC{rvof}":PRINT
 2020 PRINT "{yel}1 {wht}{rvon}SUBTUNE {rvof}1: H{rvon}EXED{rvof}"
-2030 PRINT "{yel}2 {wht}{rvon}SUBTUNE {rvof}2: H{rvon}EXED {rvof}G{rvon}LIDE{rvof}":PRINT
+2030 PRINT "{yel}2 {wht}{rvon}SUBTUNE {rvof}2: H{rvon}EXED {rvof}G{rvon}LIDE{rvof}"
+2035 PRINT "{yel}3 {wht}{rvon}SUBTUNE {rvof}3: H{rvon}EXED {rvof}C{rvon}ALM{rvof}":PRINT
 2040 PRINT "{yel}SPACE {wht}{rvon}STOP   {yel}{rvof}+ - {wht}{rvon}MUSIC VOLUME{rvof}"
 2050 PRINT "{yel}RETURN {wht}{rvon}BACK{rvof}":PRINT:GOSUB 2060:GOTO 2070
 2060 PRINT "{cyn}{rvon}MUSIC VOL{rvof}";MV;"  ":RETURN
 2070 GET K$:IF K$="" THEN 2070
 2080 IF K$=CHR$(13) THEN RETURN
-2090 IF K$="1" OR K$="2" THEN SYS 36867:POKE 36871,VAL(K$)-1:GOSUB 2200
+2090 IF K$>="1" AND K$<="3" THEN SYS 36867:POKE 36871,VAL(K$)-1:GOSUB 2200
 2100 IF K$=" " THEN SYS 36867
 2110 IF K$="+" AND MV<15 THEN MV=MV+1:GOSUB 2300
 2120 IF K$="-" AND MV>0 THEN MV=MV-1:GOSUB 2300

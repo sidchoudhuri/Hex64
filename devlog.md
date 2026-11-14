@@ -1,5 +1,18 @@
 # Hex64 devlog
 
+## v7 - 2026-11-14
+
+**Music**
+- New subtune 3, "Hexed Calm": only the long tones. Each group of four plucks becomes one held note that swells in, over the same Hexed bass. It plays by default.
+- T switches the tune: Hexed Calm, Hexed, Hexed Glide, and round again. In SID setup it shows as "T - Tune: ..."; in the game the header names the tune. The choice is kept (setting 40711) and the demo plays the same tune.
+- The menu shows the tune playing under the panel, after PAL or NTSC.
+- `sid/` .sid files have the three subtunes, subtune 3 (Hexed Calm) first.
+
+**Text**
+- Instructions: "T - tune" on the Space line; `HEX64HELP` rebuilt with it (its volume and last lines kept as they were).
+- Credits list all three tunes.
+- Test tool: subtune 3 on key 3.
+
 ## v6 - 2026-11-13
 
 **Fruit**

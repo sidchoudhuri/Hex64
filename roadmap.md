@@ -23,6 +23,7 @@ Status: **DONE**, **TO DO**, **TO DO LATER**, **MAYBE**.
 | DONE | v6: retry a failed board: when a board fills up, R plays that board again with the score you started it with (N new game, Q menu) |
 | DONE | v6: loader arrays `PH%` and `PA%` are integer |
 | DONE | New directory art: hexagon with a stack of chips, drawn by m0nde |
+| DONE | v7: "Hexed Calm" (only the long tones) as subtune 3 and the default; T switches between Hexed Calm, Hexed and Hexed Glide in SID setup and the game |
 | TO DO | Test on real hardware, including two SIDs and NTSC (only tested in VICE so far, one SID, PAL) |
 | TO DO | Record a GIF of the demo for the itch.io page |
 | TO DO LATER | Music changes from "Hexed" to "Hexed Glide" on game events (the demo must switch the same way) |

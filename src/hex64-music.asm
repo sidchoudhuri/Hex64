@@ -5,14 +5,15 @@
 ; Music uses SID 1 voices 1 and 2 only. Voice 3 is left free for sound effects.
 ; Tempo comes from the KERNAL 60 Hz IRQ, so it is the same on PAL and NTSC;
 ; init picks the PAL or NTSC pitch table from $02A6.
-; $9007 picks the song before start: 0 = Hexed, 1 = Hexed with glides.
+; $9007 picks the song before start: 0 = Hexed, 1 = Hexed Glide, 2 = Hexed Calm
+; (only the long tones: each group of four plucks becomes one held note).
 ; Tune data: note (C1=1 ... B6=72, +128 = glide into it, 0 = rest),
 ;            duration in ticks, gate ticks (255 = hold); 255 as a note = loop.
         * = $9000
         jmp start
         jmp stop
 s2      !byte 0
-song    !byte 0                 ; $9007: 0 = song 1 (Hexed), 1 = song 2 (Hexed with glides)
+song    !byte 2                 ; $9007: 0 = Hexed, 1 = Hexed Glide, 2 = Hexed Calm
         !byte 0
         jmp init
         jmp play
@@ -67,8 +68,10 @@ init    ldx #71                 ; copy the PAL or NTSC pitch table
 ++      dex
         bpl -
         lda song
-        and #1
-        tax
+        cmp #3
+        bcc +
+        lda #2
++       tax
         lda t1l,x
         sta st1l
         sta v1g+1
@@ -344,12 +347,12 @@ st1l    !byte 0
 st1h    !byte 0
 st2l    !byte 0
 st2h    !byte 0
-t1l     !byte <s1v1,<s2v1       ; per-song start of voice 1 data
-t1h     !byte >s1v1,>s2v1
-t2l     !byte <s1v2,<s2v2       ; per-song start of voice 2 data
-t2h     !byte >s1v2,>s2v2
-ad1     !byte $19,$19           ; voice 1 attack/decay per song
-sr1     !byte $0a,$5a           ; voice 1 sustain/release: song 2 holds notes for glides
+t1l     !byte <s1v1,<s2v1,<s3v1 ; per-song start of voice 1 data
+t1h     !byte >s1v1,>s2v1,>s3v1
+t2l     !byte <s1v2,<s2v2,<s1v2 ; per-song start of voice 2 data (Calm uses the Hexed bass)
+t2h     !byte >s1v2,>s2v2,>s1v2
+ad1     !byte $19,$19,$5a       ; voice 1 attack/decay per song (Calm swells in)
+sr1     !byte $0a,$5a,$6b       ; voice 1 sustain/release: songs 2 and 3 hold notes
 flo     !fill 72,0
 fhi     !fill 72,0
 pallo !byte 45,78,113,150,190,231,20,66,116,169,224,27,90,156,226,45,123,207,39,133,232,81,193,55
@@ -396,6 +399,12 @@ s2v2 !byte 25,136,255,153,136,124,22,136,255,150,136,124,18,136,255,146,136,124,
      !byte 153,136,255,153,136,124,22,136,255,150,136,124,18,136,255,146,136,124,20,136,255,148,136,255
      !byte 153,136,255,153,136,124,22,136,255,150,136,124,18,136,255,146,136,124,20,136,255,148,136,255
      !byte 153,136,255,153,136,124,22,136,255,150,136,124,18,136,255,146,136,124,20,136,255,148,136,255
+     !byte 255
+
+s3v1 !byte 37,104,88,56,104,88,34,104,88,53,104,88,30,104,88,56,104,88,32,104,88,51,104,88
+     !byte 53,104,88,51,104,88,49,104,88,46,104,88,46,104,88,56,104,88,51,104,88,46,104,88
+     !byte 37,104,88,56,104,88,34,104,88,53,104,88,30,104,88,56,104,88,32,104,88,51,104,88
+     !byte 53,104,88,51,104,88,49,104,88,46,104,88,46,104,88,56,104,88,51,104,88,46,104,88
      !byte 255
 
 ; entry points used only by the .sid files (set PAL/NTSC, then init)
